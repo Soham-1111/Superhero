@@ -39,3 +39,65 @@ function block_update(getimage){
         canvas.add(block_img);
     })
 }
+
+window.addEventListener("keydown", my_keydown);
+
+function my_keydown(e){
+   keypress=e.keyCode;
+   if( e.shiftKey ==true && keypress =='80'){
+       console.log("p and shift key are pressed");
+       block_width= block_width+10;
+       block_height= block_height+10;
+       document.getElementById("current_width").innerHTML=block_width;
+       document.getElementById("current_height").innerHTML=block_height;
+
+
+   }
+   if( e.shiftKey ==true && keypress =='77'){
+    console.log("m and shift key are pressed");
+    block_width= block_width-10;
+    block_height= block_height-10;
+    document.getElementById("current_width").innerHTML=block_width;
+    document.getElementById("current_height").innerHTML=block_height;
+
+
+}
+ 
+if(keypress=='38'){
+    console.log("up is pressed");
+     up();
+}
+if(keypress=='40'){
+    console.log("down is pressed");
+     down();
+}
+if(keypress=='37'){
+    console.log("left is pressed");
+     left();
+}
+if(keypress=='39'){
+    console.log("right is pressed");
+     right();
+}
+if(keypress=='70'){
+    console.log("f is pressed");
+     block_update("ironman_face.png");
+}
+if(keypress=='66'){
+    console.log("b is pressed");
+     block_update("spiderman_body.png");
+}
+if(keypress=='76'){
+    console.log("l is pressed");
+     block_update("hulk_legs.png");
+}
+if(keypress=='82'){
+    console.log("r is pressed");
+     block_update("thor_right_hand.png");
+}
+if(keypress=='72'){
+    console.log("h is pressed");
+     block_update("captain_america_left_hand.png");
+}
+
+}
