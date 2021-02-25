@@ -101,3 +101,59 @@ if(keypress=='72'){
 }
 
 }
+
+function up(){
+    if(player_y>=0){
+        player_y-= block_height;
+        
+        console.log("x=" + player_x + "y=" + player_y);
+        console.log("block_image_height= "+ block_height);
+        canvas.remove(player_img);
+        player_update();
+        
+
+    }
+
+}
+
+function down(){
+if (player_y<=510){
+        player_y+= block_height;
+        
+        console.log("x=" + player_x + "y=" + player_y);
+        console.log("block_image_height= "+ block_height);
+        canvas.remove(player_img);
+        player_update();
+        
+
+    }
+
+}
+
+function left(){
+    if (player_x>=-20){
+            player_x-= block_width;
+            
+            console.log("x=" + player_x + "y=" + player_y);
+            console.log("block_image_width= "+ block_width);
+            canvas.remove(player_img);
+            player_update();
+            
+    
+        }
+    
+    }
+
+    function right(){
+        if (player_x<=850){
+                player_x+= block_width;
+                
+                console.log("x=" + player_x + "y=" + player_y);
+                console.log("block_image_width= "+ block_width);
+                canvas.remove(player_img);
+                player_update();
+                
+        
+            }
+        
+        }
